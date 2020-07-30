@@ -1,0 +1,29 @@
+.ExamplePage {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: white;
+  font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #202236;
+  line-height: 125%;
+}
+
+.Contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 2rem 0;    
+}
+
+.Buttons {
+  display: flex;
+
+  > * {
+    margin-right: 1rem;
+  }
+}
