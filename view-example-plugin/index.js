@@ -1,5 +1,7 @@
 const drawer = require('./lib/drawer')
 const view = require('./lib/view')
+const pluginConfig = require('./lib/configure');
+
 
 /**
  * Plugin instantiation method
@@ -19,7 +21,9 @@ function plugin(api) {
 	});
 }
 
-if (typeof activate !== 'undefined') {
+if (typeof configure !== 'undefined') {
+	configure(pluginConfig);
+} else if (typeof activate !== 'undefined') {
 	activate(plugin);
 } else {
 	module.exports = plugin;
