@@ -1,0 +1,27 @@
+.Checkbox_Row {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5rem;
+  font-size: 1.167rem;
+  margin-bottom: 2rem;
+
+  .Checkbox_Label {
+    margin-left: 1rem;
+    display: flex;
+
+    .Required {
+      text-transform: uppercase;
+      color: #f16359;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  a {
+    color: #1fa0a3;
+  }
+}
+
+.SubmitButton {
+  margin-bottom: 0.5rem;
+}
