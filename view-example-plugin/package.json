@@ -5,14 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
-    "build": "webpack -p --progress",
-    "serve": "npm run build && http-server -S -K localhost.key -C localhost.crt -p 8080 --cors dist/"
+    "build": "rm -rf dist/* && webpack -p --progress",
+    "serve": "npm run build && http-server dist/ -p 9100 --cors"
   },
   "keywords": [],
-  "author": "Nathan Oehlman",
+  "author": "Coviu",
   "license": "Private",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
