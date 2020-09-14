@@ -24,7 +24,7 @@ Because the styles will be given generated names, they can be referenced by requ
 
 ## Building
 
-To build the plugin, you will need Node.js (6+ preferred) and NPM installed. Then:
+To build the plugin, you will need Node.js (12+ preferred) and NPM installed. Then:
 
 1. Install the dependencies using `npm install`
 
@@ -36,8 +36,6 @@ You can serve the plugin locally using `npm run serve`. This will serve the buil
 
 ## Loading into Coviu
 
-### Pre-defined development plugin
+1. Register sandbox account via [service desk](https://coviu.atlassian.net/servicedesk/customer/portal/8/group/13/create/10118) with pre-defined addon setting
 
-If you have a pre-configured development plugin attached to your account, it will attempt to load the plugin artifacts from a path on your local machine.
-
-If this is the case, simply run `npm run serve`, and the plugin will be loaded when you access a room path in your team.
+2. Login into your sandbox account, trigger a call (e.g. room or waiting area) launching local addon at `http://localhost:9100/plugin.js`. 
