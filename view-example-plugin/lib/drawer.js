@@ -78,7 +78,20 @@ module.exports = (api) => {
 					h('label', 'Guest Calculations'),
 					h('ul', calculations.map((calc) => {
 						return h('li', `Input: ${calc.input}, Output: ${calc.output}`)
-					}))
+					})),
+					h('select.Input.SelectInput', {
+						'ev-change': ev => {
+							const selected = ev.target.value;
+							if (selected === 'Increment') {
+								counterState.set(counter + 1);
+							} else {
+								counterState.set(counter - 1);
+							}
+						}
+					}, [
+						h('option', 'Increment'),
+						h('option', 'Decrement')
+					])
 				]);
 			});
 		}

@@ -20,3 +20,37 @@ $fa-icn-calculator: '\f1ec';
 	flex-direction: column;
 	font-size: 0.9rem;
 }
+
+.SelectInput {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	height: auto;
+	padding: 1rem;
+
+	// add chevron-down as background image
+	padding-right: 27px;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMBAMAAACkW0HUAAAAKlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKE86IAAAADXRSTlMAAgQHGk5iaYi1wNX1blBxMAAAADpJREFUCB1jYEABPgkMDJKLGNZeY2Cce5XB+m6C5N0GBua91+feACqzvgvkMAC5IA6Q2wCmGMEkMgEA03oPIS2G8akAAAAASUVORK5CYII=');
+	background-position: calc(100% - 1rem) 50%;
+	background-repeat: no-repeat;
+
+	option {
+		color: #202236;
+		text-transform: none;
+
+		&:first-of-type {
+			margin-top: 0.25rem;
+		}
+	}
+
+	optgroup {
+		color: #b9b6a6;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+
+	&.-single {
+		height: 3.333rem;
+		padding: 0 0.5rem;
+	}
+}
