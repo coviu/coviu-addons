@@ -15,27 +15,21 @@ module.exports = (api) => {
          This is called when this view becomes the active view
          **/
         view: (viewApi) => {
-            console.log('api.webhooks.trigger');
-            console.log("Debug - post call api.local id", api.local.id());
-
             const body = {
                 clientID: api.local.id(),
                 coviuSessionID: api.local.id(),
                 sessionStart: new Date(),
                 eventType: "sessionStop"
             };
+
             console.log("Debug - post call webhook trigger body", body);
-            // api.webhooks.trigger(
-            //     "session",
-            //     {
-            //         clientID: "clientID",
-            //         coviuSessionID: "coviuSessionID",
-            //         sessionStart: new Date(),
-            //         eventType: "sessionStart"
-            //     },
-            //     {},
-            //     null
-            // )
+
+            api.webhooks.trigger(
+                "session",
+                body,
+                {},
+                null
+            )
             
             viewApi.next();
 

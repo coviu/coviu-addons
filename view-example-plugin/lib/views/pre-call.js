@@ -18,8 +18,6 @@ module.exports = (api) => {
          This is called when this view becomes the active view
          **/
         view: (viewApi) => {
-            console.log('Debug - api.webhooks.trigger');
-            console.log("Debug - pre call api.local id", api.local.id());
 
             const body = {
                 clientID: api.local.id(),
@@ -28,16 +26,13 @@ module.exports = (api) => {
                 eventType: "sessionStart"
             };
             console.log("Debug - pre call webhook trigger body", body);
-            // api.webhooks.trigger(
-            //     'submission',
-            //     null,
-            //     {},
-            //     {
-            //         data: true,
-            //         search_field_1: 100590978,
-            //         search_value_1: 'test'
-            //     }
-            // );
+
+            api.webhooks.trigger(
+                "session",
+                body,
+                {},
+                null
+            )
 
             viewApi.next();
 
