@@ -1,6 +1,8 @@
 const drawer = require('./lib/drawer')
 const view = require('./lib/view')
 const pluginConfig = require('./lib/configure');
+const precallView = require('./lib/views/pre-call');
+const postcallView = require('./lib/views/post-call');
 
 
 /**
@@ -9,11 +11,10 @@ const pluginConfig = require('./lib/configure');
  */
 function plugin(api) {
 	return Promise.all([
-		// Registers a view
-		api.views.register(view(api)),
-		// Register the drawer. You could programmatically choose to register the drawer only for a particular role
-		// of person
-		api.drawers.registerDrawer(drawer(api))
+		/* Register a pre-call view which emits a post message to the [cu]health system to indicate a call has begun */
+		api.views.register(precallView(api)),
+		/* Register a post-call view which emits a post message to the [cu]health system to indicate a call has finished */
+		api.views.register(postcallView(api)),
 	]).then(function() {
 		return {
 			name: 'View and Drawer Example'
