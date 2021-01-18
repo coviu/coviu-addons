@@ -26,8 +26,8 @@ _Note: Addons are sometimes referred to as plugins in the code_
 
 
 ## Full Documentation
-wiki - https://github.com/coviu/coviu-addons/wiki. 
-api documentation - https://coviu.readme.io/docs/api-object. 
+wiki - https://github.com/coviu/coviu-addons/wiki  
+api documentation - https://coviu.readme.io/docs/api-object  
 
 ## Important Links 
 * [Coviu Addon Marketplace](https://coviu.com/addons) where existing Addons can be seen
