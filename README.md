@@ -8,7 +8,7 @@ _Note: Addons are sometimes referred to as plugins in the code_
 4. Serve the plugin locally using `npm run serve`. This will serve the built plugin at http://localhost:9100/plugin.js
 
 ## Register for Staging access
-1. Register your email address at [Coviu Developer Service Desk](https://coviu.atlassian.net/servicedesk/customer/portal/
+1. Register your email address at [Coviu Developer Service Desk](https://coviu.atlassian.net/servicedesk/customer/portal/8/group/13)
 2. Log a ticket for Staging Sandbox Registration. We will reply with a link to register your Staging account
 
 ## Interact with the example Addon being served from your local
