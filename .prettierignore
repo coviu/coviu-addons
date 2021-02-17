@@ -1,0 +1,5 @@
+*.html
+dist/
+.cache/
+node_modules/**
+package.json

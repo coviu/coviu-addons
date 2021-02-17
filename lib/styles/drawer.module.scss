@@ -1,6 +1,6 @@
 $fa-icn-calculator: '\f1ec';
 
-@mixin icon($icn, $family: 'FontAwesome', $size: 1rem, $color: currentColor, $margin: 0 0.5rem 0 0, $font-size: 1rem) {
+@mixin icon($icn, $family: 'FontAwesome', $size: 1rem, $color: currentColor, $margin: 0.5rem 0.5rem 0.5rem 0.5rem, $font-size: 1rem) {
 	&:before {
 		content: $icn;
 		font-family: #{$family};
@@ -19,4 +19,24 @@ $fa-icn-calculator: '\f1ec';
 	@include icon($fa-icn-calculator, $margin: 0 0 0.15rem 0, $font-size: 1.25rem);
 	flex-direction: column;
 	font-size: 0.9rem;
+}
+
+.panel {
+	> * {
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: whitesmoke;
+	border-radius: 30px;
+	cursor: pointer;
+	color: royalblue;
+	border: 3px solid royalblue;
+  	padding:10px;
+	flex: 0.5;
+	margin: 5px;
+	position: relative;
+	align-items: center;
+	text-align: center;
+	transition: flex 0.7s ease-in;
+	}
 }
