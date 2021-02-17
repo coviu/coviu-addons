@@ -34,3 +34,4 @@ API documentation - https://coviu.readme.io/docs/api-object
 * [Coviu Developer Service Desk](https://coviu.atlassian.net/servicedesk/customer/portal/8) where you can request development environment access or support, raise bugs and feature requests, and submit your code
 
 ## KS - adding new comments 17 Feb 2021
+## KS - adding second comment after updating credentilas locally
