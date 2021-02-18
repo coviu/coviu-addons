@@ -21,22 +21,10 @@ $fa-icn-calculator: '\f1ec';
 	font-size: 0.9rem;
 }
 
-.panel {
-	> * {
-	background-size: auto 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-color: whitesmoke;
-	border-radius: 30px;
-	cursor: pointer;
-	color: royalblue;
-	border: 3px solid royalblue;
-  	padding:10px;
-	flex: 0.5;
-	margin: 5px;
-	position: relative;
-	align-items: center;
-	text-align: center;
-	transition: flex 0.7s ease-in;
-	}
+.card {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 4px;
+	padding: 10px;
+	margin-bottom: 10px;
+	line-height: 2rem;
 }
