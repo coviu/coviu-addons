@@ -17,8 +17,7 @@
   "keywords": [],
   "author": "Coviu",
   "license": "Private",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "babel-loader": "^8.1.0",
