@@ -3,3 +3,8 @@ dist/
 .cache/
 node_modules/**
 package.json
+package-lock.json
+coverage
+.husky
+.git
+.gitignore

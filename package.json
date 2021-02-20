@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "Coviu Demo Plugin",
   "main": "index.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+
   "lint-staged": {
     "*": "prettier --write"
   },
@@ -16,7 +12,8 @@
     "build": "webpack -p --progress",
     "serve": "npm run build && http-server dist/ -p 9100 --cors",
     "publish": "npm run build && gulp publish",
-    "webpack": "envade NODE_ENV=development -- webpack-dev-server --port=9100 --host=0.0.0.0 --colors --content-base dist"
+    "webpack": "envade NODE_ENV=development -- webpack-dev-server --port=9100 --host=0.0.0.0 --colors --content-base dist",
+    "lint-staged": "lint-staged"
   },
   "keywords": [],
   "author": "Coviu",
