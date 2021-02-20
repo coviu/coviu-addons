@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Coviu Demo Plugin",
   "main": "index.js",
-
-  "lint-staged": {
-    "*": "prettier --write"
-  },
   "scripts": {
     "dev-client": "npm run webpack --hot --inline",
     "build": "webpack -p --progress",
@@ -14,6 +10,9 @@
     "publish": "npm run build && gulp publish",
     "webpack": "envade NODE_ENV=development -- webpack-dev-server --port=9100 --host=0.0.0.0 --colors --content-base dist",
     "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*": "prettier --write"
   },
   "keywords": [],
   "author": "Coviu",
