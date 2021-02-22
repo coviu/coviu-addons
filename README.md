@@ -29,7 +29,7 @@ _Note: Addons are sometimes referred to as plugins in the code_
 
 ## Full Documentation
 * [Addon (aka plugins) Documentation](https://coviu.readme.io/docs) - this is to create new functionality for Coviu
-* [Addon Discussion Board] (https://coviu.readme.io/discuss) for asking and answering questions about Addons
+* [Addon Discussion Board](https://coviu.readme.io/discuss) for asking and answering questions about Addons
 * Note that [Session API documentation](https://coviu.readme.io/docs/api-object) is to embed Coviu video windows into your own software, and is _not_ the topic of this repo
 
 ## Important Links 
