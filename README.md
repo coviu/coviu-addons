@@ -39,10 +39,3 @@ API documentation - https://coviu.readme.io/docs/api-object
 
 - [Coviu Addon Marketplace](https://coviu.com/addons) where existing Addons can be seen
 - [Coviu Developer Service Desk](https://coviu.atlassian.net/servicedesk/customer/portal/8) where you can request development environment access or support, raise bugs and feature requests, and submit your code
-
-## husky 5 config
-
-- npm install husky --save-dev
-- npx husky install
-- npx husky add .husky/pre-commit "npm run {task name}"
-  https://typicode.github.io/husky/#/
