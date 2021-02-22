@@ -8,8 +8,7 @@
     "build": "webpack -p --progress",
     "serve": "npm run build && http-server dist/ -p 9100 --cors",
     "publish": "npm run build && gulp publish",
-    "webpack": "envade NODE_ENV=development -- webpack-dev-server --port=9100 --host=0.0.0.0 --colors --content-base dist",
-    "lint-staged": "lint-staged"
+    "webpack": "envade NODE_ENV=development -- webpack-dev-server --port=9100 --host=0.0.0.0 --colors --content-base dist"
   },
   "husky": {
     "hooks": {
