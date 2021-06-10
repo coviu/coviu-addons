@@ -1,13 +1,13 @@
 {
-  "name": "coviu-demo-plugin",
+  "name": "coviu-drawer-plugin",
   "version": "1.0.0",
   "description": "Coviu Demo Plugin",
   "main": "index.js",
   "scripts": {
     "dev-client": "npm run webpack --hot --inline",
-    "build": "webpack -p --progress",
-    "serve": "npm run build && http-server dist/ -p 9100 --cors",
-    "publish": "npm run build && gulp publish",
+    "build": "../node_modules/.bin/webpack -p --progress",
+    "serve": "npm run build && ../node_modules/.bin/http-server dist/ -p 9100 --cors",
+    "publish": "npm run build && ../node_modules/.bin/gulp publish",
     "webpack": "envade NODE_ENV=development -- webpack-dev-server --port=9100 --host=0.0.0.0 --colors --content-base dist"
   },
   "husky": {

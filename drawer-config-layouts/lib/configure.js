@@ -1,6 +1,6 @@
 const stylesModule = require('./styles/configure.module.scss');
 
-const CONFIG_SETTING_KEY = '' // Any string
+const CONFIG_SETTING_KEY = ''; // Any string
 
 module.exports = (api) => {
   const { h, spinner } = api.render;
@@ -22,7 +22,7 @@ module.exports = (api) => {
   // Load the initial setting state
   api.persist
     .loadPublicSetting(CONFIG_SETTING_KEY)
-    .then(config => {
+    .then((config) => {
       state.loading.set(false);
       if (!config) return;
       state.inputText.set(config.inputText);
@@ -38,19 +38,19 @@ module.exports = (api) => {
       .savePublicSetting(CONFIG_SETTING_KEY, {
         inputText: state.inputText(),
         inputCheckbox1: state.inputCheckbox1(),
-        inputCheckbox2: state.inputCheckbox2()
+        inputCheckbox2: state.inputCheckbox2(),
       })
       .then(() => {
         state.saving.set(false);
         state.status.set('success');
       })
-      .catch(err => {
+      .catch((err) => {
         state.saving.set(false);
         state.status.set('error');
       });
   };
 
-  return function() {
+  return function () {
     const _state = state();
     const {
       inputText,
@@ -58,63 +58,60 @@ module.exports = (api) => {
       saving,
       status,
       inputCheckbox1,
-      inputCheckbox2
+      inputCheckbox2,
     } = _state;
     if (loading || saving) return spinner();
     return h(
       'form.Standard_Form',
       {
-        'ev-submit': e => {
+        'ev-submit': (e) => {
           e.preventDefault();
           save();
-        }
+        },
       },
       [
         h('div.StandardForm_Row', [
           h('label', ['Input text', h('span.Required', 'Required')]),
           h(`input.Input`, {
             value: inputText,
-            'ev-input': e => {
+            'ev-input': (e) => {
               state.inputText.set(e.target.value);
             },
             placeholder: 'eg: text',
-            required: true
+            required: true,
           }),
-          h(
-            'div.StandardForm_Note.-info',
-            'description'
-          )
+          h('div.StandardForm_Note.-info', 'description'),
         ]),
         h(`div.${stylesModule.Checkbox_Row}`, [
           h(`label.${stylesModule.Checkbox_Label}`, [
             h('input', {
               type: 'checkbox',
               checked: inputCheckbox1,
-              'ev-change': e => {
+              'ev-change': (e) => {
                 state.inputCheckbox1.set(e.target.checked);
               },
-              required: true
+              required: true,
             }),
             'checkbox1',
-            h(`span.${stylesModule.Required}`, 'Required')
-          ])
+            h(`span.${stylesModule.Required}`, 'Required'),
+          ]),
         ]),
         h(`div.${stylesModule.Checkbox_Row}`, [
           h(`label.${stylesModule.Checkbox_Label}`, [
             h('input', {
               type: 'checkbox',
               checked: inputCheckbox2,
-              'ev-change': e => {
+              'ev-change': (e) => {
                 state.inputCheckbox2.set(e.target.checked);
-              }
+              },
             }),
-            'checkbox2'
-          ])
+            'checkbox2',
+          ]),
         ]),
         h(
           `button.Button.${stylesModule.SubmitButton}`,
           {
-            type: 'submit'
+            type: 'submit',
           },
           'Save'
         ),
@@ -129,7 +126,7 @@ module.exports = (api) => {
               'div.HighlightedText.-error.-block',
               'Failed to save your settings'
             )
-          : undefined
+          : undefined,
       ]
     );
   };
