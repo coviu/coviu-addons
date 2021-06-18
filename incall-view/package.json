@@ -1,7 +1,7 @@
 {
-  "name": "coviu-drawer-config-plugin",
+  "name": "coviu-in-call-plugin",
   "version": "1.0.0",
-  "description": "Coviu Drawer & Config Demo Plugin",
+  "description": "Coviu In-call Demo Plugin",
   "main": "index.js",
   "scripts": {
     "dev-client": "npm run webpack --hot --inline",
