@@ -8,11 +8,9 @@ module.exports = function (api) {
     description: NAME,
 
     /**
-     Called on the side that is adding the view (resource)
+     * Called on the side that is adding the view (resource)
      */
     add: function (core, resources, opts = {}) {
-      console.log('DEBUG - _handler.add', opts);
-
       return new Promise((resolve, reject) => {
         const ownerId = api.local.id();
 
@@ -28,18 +26,14 @@ module.exports = function (api) {
           type: RESOURCE_TYPE,
         });
 
-        console.log('DEBUG - item');
-
         return resolve(item);
       });
     },
 
     /**
-     Called on video is setup for all participants
+     * Called on video is setup for all participants
      **/
     setup: function (core, resources, item) {
-      console.log('DEBUG - _handler.setup', item);
-
       // If we don't have a cache, request one
       if (!api.resources.getCache(item.id)) {
         const cache = resources.methods.newResourceCache(item.id, {});
@@ -52,12 +46,12 @@ module.exports = function (api) {
     },
 
     /**
-     Called on video is enabled for all participants
+     * Called on video is enabled for all participants
      **/
     enable: () => {},
 
     /**
-     Called on video is disabled for all participants
+     * Called on video is disabled for all participants
      **/
     disable: () => {},
   };

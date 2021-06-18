@@ -7,8 +7,6 @@ module.exports = (api) => {
     render: { h, thunk },
   } = api;
 
-  console.log('DEBUG - renderer.js');
-
   return {
     id: RESOURCE_TYPE,
     label: displayText('In-call view demo'),
@@ -18,7 +16,6 @@ module.exports = (api) => {
      * Called when renderer is loaded
      */
     activate: () => {
-      console.log('DEBUG - renderer.js activate');
       api.resources.add(RESOURCE_TYPE);
     },
 
@@ -26,7 +23,6 @@ module.exports = (api) => {
      * Indicates whether or not to render a custom interface
      */
     requiresCustomInterface: function (resource) {
-      console.log('DEBUG - renderer.js requiresCustomInterface', true);
       return true;
     },
 
@@ -40,8 +36,6 @@ module.exports = (api) => {
       availableSpace,
       hashes
     ) => {
-      console.log('DEBUG - renderer.js renderCustomInterface');
-
       return thunk(
         `view-${resource.id}`,
         {
