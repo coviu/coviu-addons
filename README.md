@@ -2,12 +2,21 @@
 
 ## Walkthrough to create your own Addon
 
+### Take a look of addon examples
+#### Drawer & Toggle
+![drawer](./assets/drawer-toggle.png)
+
+#### In-call view
+![in-call](./assets/in-call-view.png)
+
+#### Pre-call & Post-call views (phases before entering the call and after leaving the call)
+![pre-call-post-call](./assets/pre-call-post-call-views.png)
+
 ### Build and Serve Plugin locally
 _Note: Addons are sometimes referred to as plugins in the code_
-1. Clone the [Coviu Demo Plugin](https://github.com/coviu/coviu-addons)
+1. Clone one example from [Coviu Demo Plugin](https://github.com/coviu/coviu-addons)
 2. Install the dependencies using `npm install`
-3. Build the plugin using `npm run build`
-4. Serve the plugin locally using `npm run serve`. This will serve the built plugin at http://localhost:9100/plugin.js
+4. Serve the plugin locally using `npm run start`. This will serve the built plugin at http://localhost:9100/plugin.js
 
 ### Register for Staging access
 1. Register your email address at [Coviu Developer Service Desk](https://coviu.atlassian.net/servicedesk/customer/portal/8/group/13)
