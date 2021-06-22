@@ -7,8 +7,7 @@
     "dev-client": "npm run webpack --hot --inline",
     "build": "../node_modules/.bin/webpack -p --progress",
     "serve": "npm run build && ../node_modules/.bin/http-server dist/ -p 9100 --cors",
-    "publish": "npm run build && ../node_modules/.bin/gulp publish",
-    "webpack": "envade NODE_ENV=development -- webpack-dev-server --port=9100 --host=0.0.0.0 --colors --content-base dist"
+    "start": "envade NODE_ENV=development -- webpack-dev-server --port=9100 --host=0.0.0.0 --colors --content-base dist"
   },
   "husky": {
     "hooks": {
