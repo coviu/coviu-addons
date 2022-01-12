@@ -1,6 +1,6 @@
-const document = require('./lib/document');
-const handler = require('./lib/handler');
-const renderer = require('./lib/renderer');
+import document from './lib/document';
+import handler from './lib/handler';
+import renderer from './lib/renderer';
 
 /**
  * Plugin instantiation method

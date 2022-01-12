@@ -1,6 +1,6 @@
-const { RESOURCE_TYPE, NAME } = require('./constants');
+import { RESOURCE_TYPE, NAME } from './constants';
 
-module.exports = function (api) {
+export default function (api) {
   const { displayText } = api;
 
   return {
