@@ -1,5 +1,5 @@
 const { RESOURCE_TYPE, NAME } = require('./constants');
-const styles = require('./styles/view.module.scss');
+const styles = require('./styles/view.module.css');
 
 module.exports = (api) => {
   const {
