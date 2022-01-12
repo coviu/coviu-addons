@@ -1,5 +1,5 @@
 const { DRAWER_ID } = require('./constants');
-import styles from './styles/drawer.module.css';
+const styles = require('./styles/drawer.module.css');
 
 /**
  * This adds a drawer that is used to display vital statistics
