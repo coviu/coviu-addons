@@ -1,38 +1,17 @@
-/* // $fa-icn-calculator: '\f1ec';
-
-// @mixin icon(
-//   $icn,
-//   $family: 'FontAwesome',
-//   $size: 1rem,
-//   $color: currentColor,
-//   $margin: 0.5rem 0.5rem 0.5rem 0.5rem,
-//   $font-size: 1rem
-// ) {
-//   &:before {
-//     content: $icn;
-//     font-family: #{$family};
-//     font-weight: normal;
-//     vertical-align: middle;
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
-//     flex-shrink: 0;
-//     margin: #{$margin};
-//     font-size: #{$font-size};
-//     color: #{$color};
-//   }
-// } */
-
-.DrawerToggle {
-  content: '🧮';
-  background-color: red !important;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-  font-size: 1rem;
-  height: 100%;
-  width: 100%;
+.DrawToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.DrawerToggle::before{
-  content: '🧮';
+
+.DrawerToggle::after{
+  content: '\f1ec';
+  font-family: 'FontAwesome';
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .card {

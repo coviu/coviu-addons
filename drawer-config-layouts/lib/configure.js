@@ -1,8 +1,8 @@
-const stylesModule = require('./styles/configure.module.css');
+import stylesModule from './styles/drawer.module.css';
 
 const CONFIG_SETTING_KEY = ''; // Any string
 
-module.exports = (api) => {
+export default (api) => {
   const { h, spinner } = api.render;
   const { value, struct } = api.observ;
 

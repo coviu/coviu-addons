@@ -20,18 +20,9 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/i,
+        test: /\.module\.css$/i,
         use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: '[local]___[hash:base64:5]',
-              },
-              importLoaders: 2,
-            },
-          },
+          'style-loader','css-loader'
         ],
       },
     ],
