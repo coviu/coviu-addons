@@ -1,7 +1,7 @@
 import { RESOURCE_TYPE, NAME } from './constants';
 import styles from './styles/view.module.css';
 
-export default (api) => {
+export default function (api) {
   const {
     displayText,
     render: { h, thunk },
