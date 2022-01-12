@@ -1,4 +1,4 @@
-const stylesModule = require('./styles/configure.module.scss');
+const stylesModule = require('./styles/configure.module.css');
 
 const CONFIG_SETTING_KEY = ''; // Any string
 
