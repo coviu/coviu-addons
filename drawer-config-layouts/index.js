@@ -1,6 +1,6 @@
-const hostDrawer = require('./lib/hostDrawer');
-const guestDrawer = require('./lib/guestDrawer');
-const pluginConfig = require('./lib/configure');
+import hostDrawer from './lib/hostDrawer';
+import guestDrawer from './lib/guestDrawer';
+import pluginConfig from './lib/configure';
 
 /**
  * Plugin instantiation method
