@@ -1,9 +1,9 @@
-const styles = require('./styles/view.module.scss');
+import styles from './styles/view.module.css';
 
 /**
   This is an example precall flow view
  **/
-module.exports = (api) => {
+export default function(api) {
 
 	const { value } = api.observ;
 	const { h } = api.render;
