@@ -1,10 +1,12 @@
 import styles from './styles/view.module.css';
+import debug from 'debug';
+debug('coviu:plugins:precall-postcall-views');
 
 /**
   This is an example precall flow view
  **/
 export default function(api) {
-
+	
 	const { value } = api.observ;
 	const { h } = api.render;
 
@@ -12,6 +14,8 @@ export default function(api) {
 		input: value(undefined),
 		output: value(undefined)
 	});
+
+	debug('starting up precall module')
 
 	return {
 		name: 'precall-view',
