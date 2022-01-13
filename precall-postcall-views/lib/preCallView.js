@@ -1,5 +1,4 @@
 import styles from './styles/view.module.css';
-var debug = require('debug')('coviu:plugins:precall-postcall-views')
 
 /**
   This is an example precall flow view
@@ -14,8 +13,6 @@ export default function(api) {
 		output: value(undefined)
 	});
 
-	debug('starting up precall module')
-
 	return {
 		name: 'precall-view',
 		phase: 'precall',
@@ -27,7 +24,6 @@ export default function(api) {
 		 **/
 		required: (context) => {
 			// Only show this for guest users
-			debug('checking if owner: %s', !api.call.hasOwnerAccess())
 			return !api.call.hasOwnerAccess();
 		},
 
@@ -51,13 +47,8 @@ export default function(api) {
 			// to cause a re-render of the view
 			listeners.push(state(viewApi.touch));
 
-			
-			debug('registering view')
-			console.log('REGISTERING VIEW')
-
 			// This function will get called everytime that our view requires a refresh
 			return () => {
-				console.log('REGISTERING VIEW OBJECT')
 				const { input, output } = state();
 				return h(`div.${styles.ExamplePage}`, [
 					h(`div.${styles.Contents}`, [
