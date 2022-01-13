@@ -50,6 +50,7 @@ export default function(api) {
 			// This function will get called everytime that our view requires a refresh
 			return () => {
 				const { input, output } = state();
+				console.log("=============================================================================STATE REFRESH")
 				return h(`div.${styles.ExamplePage}`, [
 					h(`div.${styles.Contents}`, [
 						h('p', 'This is a post-call custom view.'),
