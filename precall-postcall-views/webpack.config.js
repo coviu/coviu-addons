@@ -15,40 +15,20 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
       },
       {
-        test: /\.module\.scss$/i,
+        test: /\.css$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          { loader: 'style-loader' },
-          // Translates CSS into CommonJS
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: '[local]___[hash:base64:5]',
-              },
-              importLoaders: 2,
-            },
-          },
-          // Compiles Sass to CSS
-          { loader: 'sass-loader' },
+          'style-loader', 'css-loader'
         ],
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader',
-        type: 'javascript/auto',
       },
     ],
   },
-  plugins: [new webpack.EnvironmentPlugin(['NODE_ENV'])],
+  plugins: [new webpack.EnvironmentPlugin({NODE_ENV: 'development'})],
   devtool: 'hidden-source-map',
-  node: {
-    console: true,
-    net: 'empty',
-    tls: 'empty',
-  },
   devServer: {
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -56,6 +36,15 @@ module.exports = {
       'Access-Control-Allow-Headers':
         'X-Requested-With, content-type, Authorization',
     },
-    disableHostCheck: true,
+    port: 9100,
+    host: 'localhost',
+    hot: false,
+    static: './dist',
+    watchFiles: ['./index.js', './lib/**/*'],
+    allowedHosts: ['.localhost'],
+  },
+  watchOptions: {
+    aggregateTimeout: 100,
+    poll: true,
   },
 };

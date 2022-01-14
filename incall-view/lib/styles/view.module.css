@@ -17,13 +17,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 0 0 2rem 0;
 }
 
 .Buttons {
   display: flex;
+}
 
-  > * {
-    margin-right: 1rem;
-  }
+.Buttons > * {
+  margin-right: 1rem;
 }

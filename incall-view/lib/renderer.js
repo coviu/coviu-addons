@@ -1,7 +1,7 @@
-const { RESOURCE_TYPE, NAME } = require('./constants');
-const styles = require('./styles/view.module.scss');
+import { RESOURCE_TYPE, NAME } from './constants';
+import styles from './styles/view.module.css';
 
-module.exports = (api) => {
+export default function (api) {
   const {
     displayText,
     render: { h, thunk },

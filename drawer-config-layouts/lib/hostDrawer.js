@@ -1,5 +1,5 @@
-const { DRAWER_ID } = require('./constants');
-const styles = require('./styles/drawer.module.scss');
+import { DRAWER_ID } from './constants';
+import styles from './styles/drawer.module.css';
 
 /**
  * This adds a drawer that is used to display vital statistics
@@ -8,7 +8,7 @@ const styles = require('./styles/drawer.module.scss');
  * is activated and it provides methods that allow plugin to interact with
  * the call and other resources on coviu platform
  */
-module.exports = (api) => {
+export default (api) => {
   // extract mercury (h)& thunk instances  for use in plugin ui rendering
   // extract DrawerToggle & DrawerHelp to use for drawer rendering
   const { h, thunk, DrawerToggle, Tooltip, DrawerHelp } = api.render;

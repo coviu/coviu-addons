@@ -1,0 +1,23 @@
+.DrawToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.DrawerToggle::after{
+  content: '\f1ec';
+  font-family: 'FontAwesome';
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  line-height: 2rem;
+}

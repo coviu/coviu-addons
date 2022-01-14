@@ -1,10 +1,10 @@
-const { DRAWER_ID } = require('./constants');
-const styles = require('./styles/drawer.module.scss');
+import { DRAWER_ID } from './constants';
+import styles from './styles/drawer.module.css';
 
 /**
  * This adds a drawer that is used to display vital statistics
  */
-module.exports = (api) => {
+ export default (api) => {
   const { h, thunk, DrawerToggle, Tooltip, DrawerHelp } = api.render;
   const { array, value } = api.observ;
   const { displayText } = api;

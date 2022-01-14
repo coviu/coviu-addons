@@ -1,5 +1,5 @@
-const preCallView = require('./lib/preCallView');
-const postCallView = require('./lib/postCallView');
+import preCallView from './lib/preCallView';
+import postCallView from './lib/postCallView';
 
 /**
  * Plugin instantiation method
@@ -7,15 +7,11 @@ const postCallView = require('./lib/postCallView');
  */
 function plugin(api) {
 	return Promise.all([
-	]).then(function() {
-		const isHost = api.call.hasOwnerAccess();
-
 		// Registers a view precall view
-		api.views.register(preCallView(api));
-
+		api.views.register(preCallView(api)),
 		// Registers a view postcall view
-		api.views.register(postCallView(api));
-
+		api.views.register(postCallView(api))
+	]).then(function() {
 		return {
 			name: 'Coviu Demo Plugin'
 		};
