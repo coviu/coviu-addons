@@ -9,7 +9,7 @@ export default function (api) {
 
   return {
     id: RESOURCE_TYPE,
-    label: displayText('In-call view demo'),
+    label: displayText('In-call mesh syncing demo'),
     description: NAME,
 
     /**
@@ -36,8 +36,6 @@ export default function (api) {
       availableSpace,
       hashes
     ) => {
-      // const updater = api.resources.getCache(resource.id);
-
       return thunk(
         `view-${resource.id}`,
         {
@@ -57,12 +55,26 @@ export default function (api) {
             [
               h(`div.${styles.Contents}`, [
                 h('p', 'This is a in-call custom view.'),
-                h('p', 'This will appear when addon is requested to activate'),
-                h('button', {
-                  'ev-click': () => {
-                    console.log(resource.id)
+                h('p', 'The below button selection will sync across participants in a call and will be preserved and loadable by new participants'),
+                h('input', {
+                  type: 'text',
+                  name: 'sharedString',
+                  // Use the state from the saved mesh values as the value of the input field
+                  // This will be kept up to date when someone else changes values in the mesh
+                  value: String(resource.metadata.sharedString),
+                  'ev-event': (event) => {
+                    if(event.type === 'keyup') {
+                      // When a key is lifted, then we know input has finished and we can put the value into the mesh
+                      // The transaction method takes 
+                      api.resources.transaction(resource.id, (item, done) => {
+                        item.metadata.sharedString = event.target.value
+                        item.randomThing = "Add something extra to the mesh"
+                        return done()
+                        // Callback here to handle errors (I think)
+                      }, () => {})
+                    }
                   }
-                }, 'Save')
+                })
               ]),
             ]
           );
