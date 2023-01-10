@@ -35,18 +35,23 @@ export default function (api) {
      * Called on video is setup for all participants
      **/
     setup: function (core, resources, item) {
+
+      let cache = api.resource.getCache(item.id)
       // If we don't have a cache, request one
-      if (!api.resources.getCache(item.id)) {
-        const cache = resources.methods.newResourceCache(item.id, {});
+      if (!cache) {
+        cache = resources.methods.newResourceCache(item.id, {});
         cache.status.set('active');
         resources.methods.setResourceCache(item.id, cache);
       }
 
-      const cache = api.resources.getCache(item.id)
+      // initialise the message list
       cache.data.put("messages", [])
+
+      // Create the dataStream and put it on the cache so it's accessible elsewhere in the app
       const dataStream = api.streaming.events('EXAMPLE', encoder, decoder);
       cache.data.put("dataStream", dataStream)
 
+      // Subscribe to stream events and update the local cache message array on events
       dataStream.on(data => {
         cache.data.put("messages", [...cache.data.messages, data.message])
       })

@@ -57,9 +57,11 @@ export default function (api) {
                 h('button', {
 
                   'ev-click': (event) => {
+                    // Transmit an event to everyone else in the call
                     cache.data.dataStream.to("all", {message: `Message sent from ${api.local.id()}`})
                   }
                 }, ["Send a new event"]),
+                // Render out the messages from the locally cached messages
                 ...cache.data.messages.map(message => {
                   return h('p', message)
                 })
