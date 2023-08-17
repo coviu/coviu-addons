@@ -4,7 +4,7 @@ import styles from './styles/drawer.module.css';
 /**
  * This adds a drawer that is used to display vital statistics
  */
- export default (api) => {
+export default (api) => {
   const { h, thunk, DrawerToggle, Tooltip, DrawerHelp } = api.render;
   const { array, value } = api.observ;
   const { displayText } = api;

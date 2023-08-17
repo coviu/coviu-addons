@@ -59,6 +59,9 @@ export default function (api) {
                 h('input', {
                   type: 'text',
                   name: 'sharedString',
+									style: {
+										borderStyle: 'solid'
+									},
                   // Use the state from the saved mesh values as the value of the input field
                   // This will be kept up to date when someone else changes values in the mesh
                   value: String(resource.metadata.sharedString),

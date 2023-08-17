@@ -1,10 +1,17 @@
-# Coviu Addons (aka Plugins)
+# Coviu Custom Plugin Examples
 
-## Walkthrough to create your own Addon
+## Overview
+This repo contains 5 example plugins which display some of the possibilities when creating custom Coviu plugins.
 
-### Take a look of addon examples
-#### Drawer & Toggle
-![drawer](./assets/drawer-toggle.png)
+## Example Plugins
+### Toggleable Drawer Plugin
+Creates a custom drawer which can be toggled on/off in a call. The contents of the drawer can be rendered differently for Hosts and Guests of a call, with data able to be shared between Host and Guest.
+
+#### Host View
+![host-drawer](./assets/toggleable-drawer-host-view.png)
+
+#### Guest View
+![guest-drawer](./assets/toggleable-drawer-guest-view.png)
 
 #### In-call view
 ![in-call](./assets/in-call-view.png)
