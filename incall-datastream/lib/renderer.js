@@ -9,7 +9,7 @@ export default function (api) {
 
   return {
     id: RESOURCE_TYPE,
-    label: displayText('In-call view demo'),
+    label: displayText('In-call datastream demo'),
     description: NAME,
 
     /**
