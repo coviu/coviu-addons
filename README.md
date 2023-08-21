@@ -19,29 +19,36 @@ _Note: Addons are sometimes referred to as plugins in the code_
 Refer to Coviu's official documentation for external developers. The page linked above above details how to set up a development environment for working on locally served plugins.
 
 ## Example Plugins
-### 1. In-call Data Stream Plugin
-Cannot get this working at present.
-
+### 1. In-call Data Stream Example
 A datachannel stream (datastream) is a stream established between two call participants that allows for the exchange of raw byte data. It has no additional handing for the data it carries, there is no history mechanism in place, and intended for passing data between two participants as quickly as possible.
 
-### 2. In-call Mesh Syncing Plugin
+This example demonstrates in-call data streaming using a button which streams data to all other participants when clicked.
+
+![data-streaming](./assets/in-call-data-streaming.png)
+
+### 2. In-call Mesh Syncing Example
 This example demonstrates using the call mesh. A synchronized state is maintained for all the plugins during the call. This is done using CRDT data-structures. A plugin on any peer can push state changes to the webRTC mesh causing those changes to propagate to all the peers. This is stored in resource.metadata
 
 See the plugin API function api.resource.transaction() for how this is done.
 
+This example demonstrates in-call mesh syncing using a text input which is editable by all participants of the call, and will update when any participant makes a change.
+
 ![mesh-syncing](./assets/in-call-mesh-syncing.png)
 
-### 3. In-call View Plugin
-This example demonstrates an in-call view plugin. 
+### 3. In-call View Example
+This example demonstrates an in-call view which is non-interactive, but visible to all participants.
 
 ![in-call-custom-view](./assets/in-call-custom-view.png)
 
-### 4. Pre-call & Post-call Views Plugin
+### 4. Pre-call & Post-call Views Example
 Pre-call and post-call custom views are visible only to guests of a call. You can display anything you wish to a guest as they enter and/or leave a call.
+
+This example demonstrates pre-call and post-call views which are visible to guests before and after the call.
+
 ![pre-call-post-call-views](./assets/pre-call-post-call-views.png)
 
-### 5. Toggleable Drawer Plugin
-Creates a custom drawer which can be toggled on/off in a call. The contents of the drawer can be rendered differently for Hosts and Guests of a call, with data able to be shared between Host and Guest.
+### 5. Toggleable Drawer Example
+This example demonstrates a custom drawer which can be toggled on/off in a call. The contents of the drawer can be rendered differently for Hosts and Guests of a call, with data able to be shared between Host and Guest.
 
 #### Host View
 ![host-drawer](./assets/toggleable-drawer-host-view.png)
