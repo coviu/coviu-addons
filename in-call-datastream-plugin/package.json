@@ -4,8 +4,8 @@
   "description": "Coviu In-call Demo Plugin",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "start": "webpack-dev-server --mode development --stats-error-details",
+    "build": "webpack --mode production && cp ./assets/* ./dist"
   },
   "keywords": [],
   "author": "Coviu",

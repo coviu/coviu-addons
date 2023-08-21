@@ -28,3 +28,8 @@
 .Buttons > * {
   margin-right: 1rem;
 }
+
+h1 {
+	font-size: 2rem;
+	font-weight: 600;
+}
