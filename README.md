@@ -7,7 +7,7 @@ This repo is an introduction to developing custom plugins for the Coviu platform
 ### Build and Serve Plugin Locally
 _Note: Addons are sometimes referred to as plugins in the code_
 1. Either clone this whole repo, or clone a specific example plugin directory. More information about each example plugin can be found below.
-2. In the root directory of any of the example plugins, install the dependencies using `npm install`
+2. In the root directory of your chosen example plugin, install the dependencies using `npm install`
 3. Serve the plugin locally using `npm run start`. This will serve the built plugin at http://localhost:9100/plugin.js
 
 ### Using Your Plugin
@@ -17,11 +17,6 @@ _Note: Addons are sometimes referred to as plugins in the code_
 * [Coviu Add-on Documentation: Plugin Development Steps](https://coviu.readme.io/docs/technical-documentation#development-steps)
 
 Refer to Coviu's official documentation for external developers. The page linked above above details how to set up a development environment for working on locally served plugins.
-
-### Resources
-* [Addon (aka plugins) Documentation](https://coviu.readme.io/docs) - this is to create new functionality for Coviu
-* [Addon Discussion Board](https://coviu.readme.io/discuss) for asking and answering questions about Addons
-* Note that [Session API documentation](https://coviu.readme.io/docs/api-object) is to embed Coviu video windows into your own software, and is _not_ the topic of this repo
 
 ## Example Plugins
 ### 1. In-call Data Stream Plugin
@@ -53,3 +48,8 @@ Creates a custom drawer which can be toggled on/off in a call. The contents of t
 
 #### Guest View
 ![guest-drawer](./assets/toggleable-drawer-guest-view.png)
+
+### Resources
+* [Addon (aka plugins) Documentation](https://coviu.readme.io/docs) - this is to create new functionality for Coviu
+* [Addon Discussion Board](https://coviu.readme.io/discuss) for asking and answering questions about Addons
+* Note that [Session API documentation](https://coviu.readme.io/docs/api-object) is to embed Coviu video windows into your own software, and is _not_ the topic of this repo
