@@ -16,7 +16,12 @@ _Note: Addons are sometimes referred to as plugins in the code_
 #### External Developers
 * [Coviu Add-on Documentation: Plugin Development Steps](https://coviu.readme.io/docs/technical-documentation#development-steps)
 
-Refer to Coviu's official documentation for external developers. The page linked above above details how to set up a development environment for working on locally served plugins.
+External developers, please refer to Coviu's official documentation (linked above) for details on how to set up a development environment to work on locally served plugins.
+
+### Resources
+* [Addon (aka plugins) Documentation](https://coviu.readme.io/docs) - this is to create new functionality for Coviu
+* [Addon Discussion Board](https://coviu.readme.io/discuss) for asking and answering questions about Addons
+* Note that [Session API documentation](https://coviu.readme.io/docs/api-object) is to embed Coviu video windows into your own software, and is _not_ the topic of this repo
 
 ## Example Plugins
 ### 1. In-call Data Stream Example
@@ -56,7 +61,6 @@ This example demonstrates a custom drawer which can be toggled on/off in a call.
 #### Guest View
 ![guest-drawer](./assets/toggleable-drawer-guest-view.png)
 
-### Resources
-* [Addon (aka plugins) Documentation](https://coviu.readme.io/docs) - this is to create new functionality for Coviu
-* [Addon Discussion Board](https://coviu.readme.io/discuss) for asking and answering questions about Addons
-* Note that [Session API documentation](https://coviu.readme.io/docs/api-object) is to embed Coviu video windows into your own software, and is _not_ the topic of this repo
+## Important Links 
+* [Coviu Addon Marketplace](https://coviu.com/addons) where existing Addons can be seen
+* [Coviu Developer Service Desk](https://coviu.atlassian.net/servicedesk/customer/portal/8) where you can request development environment access or support, raise bugs and feature requests, and submit your code
