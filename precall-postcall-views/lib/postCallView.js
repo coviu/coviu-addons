@@ -52,7 +52,7 @@ export default function(api) {
 				const { input, output } = state();
 				return h(`div.${styles.ExamplePage}`, [
 					h(`div.${styles.Contents}`, [
-						h('p', 'This is a post-call custom view.'),
+						h('h1', 'This is a post-call custom view.'),
 						h('p', 'This will appear immediately after the call has ended.')
 					])
 				])	

@@ -53,8 +53,8 @@ export default function (api) {
             },
             [
               h(`div.${styles.Contents}`, [
-                h('p', 'This is a in-call custom view.'),
-                h('p', 'This will appear when addon is requested to activate'),
+                h('h1', 'This is a demo of an in-call custom view.'),
+                h('p', 'This will appear when addon is requested to activate')
               ]),
             ]
           );

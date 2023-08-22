@@ -123,7 +123,7 @@ export default (api) => {
         } = drawerState;
         console.log('drawer State => ', drawerState);
         return h('div.Drawer_Content', [
-          h('div.Drawer_Title', displayText('Sample Code')),
+          h('div.Drawer_Title', displayText('Drawer Title')),
           DrawerHelp('About this drawer', [
             'You can add all sorts of elements here - premade components, as well as custom ones',
           ]),

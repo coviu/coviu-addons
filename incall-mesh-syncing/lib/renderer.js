@@ -9,7 +9,8 @@ export default function (api) {
 
   return {
     id: RESOURCE_TYPE,
-    label: displayText('In-call mesh syncing demo'),
+		// The plugin name as it appears in the 'Apps & Tools' drawer in-call
+    label: displayText('In-call Mesh Syncing Plugin'),
     description: NAME,
 
     /**
@@ -54,11 +55,16 @@ export default function (api) {
             },
             [
               h(`div.${styles.Contents}`, [
-                h('p', 'This is a in-call custom view.'),
-                h('p', 'The below button selection will sync across participants in a call and will be preserved and loadable by new participants'),
+                h('h1', 'This is a demo of in-call mesh syncing.'),
+                h('p', 'The contents of the input field below will sync across participants in a call and will be preserved and loadable by new participants'),
                 h('input', {
                   type: 'text',
                   name: 'sharedString',
+									style: {
+										borderStyle: 'solid',
+                		width: `${availableSpace.width/2}px`,
+										padding: '3px'
+									},
                   // Use the state from the saved mesh values as the value of the input field
                   // This will be kept up to date when someone else changes values in the mesh
                   value: String(resource.metadata.sharedString),

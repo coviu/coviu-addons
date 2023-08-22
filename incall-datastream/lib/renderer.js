@@ -9,7 +9,7 @@ export default function (api) {
 
   return {
     id: RESOURCE_TYPE,
-    label: displayText('In-call view demo'),
+    label: displayText('In-call datastream demo'),
     description: NAME,
 
     /**
@@ -53,7 +53,7 @@ export default function (api) {
             },
             [
               h(`div.${styles.Contents}`, [
-                h('p', 'This is a in-call custom view.'),
+                h('h1', 'This is a demo of in-call data streaming.'),
                 h('button', {
 
                   'ev-click': (event) => {

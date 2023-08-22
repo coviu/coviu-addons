@@ -36,7 +36,7 @@ export default function (api) {
      **/
     setup: function (core, resources, item) {
 
-      let cache = api.resource.getCache(item.id)
+      let cache = api.resources.getCache(item.id)
       // If we don't have a cache, request one
       if (!cache) {
         cache = resources.methods.newResourceCache(item.id, {});

@@ -18,6 +18,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+	gap: 2rem;
   margin: 0 0 2rem 0;
 }
 
@@ -27,4 +28,15 @@
 
 .Buttons > * {
   margin-right: 1rem;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+button {
+	padding: 1rem;
+	background-color: #1C7A7B;
+	color: #FFF;
 }
